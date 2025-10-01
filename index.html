@@ -6,6 +6,343 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="knowledge-article" style="font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px;">
+
+<!-- Заголовок статьи -->
+<div class="article-header" style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #2d6dcc;">
+    <h1 style="color: #2d6dcc; font-size: 32px; margin-bottom: 15px;">Курс разработки омниканальных ботов от Алексея Демидёнка</h1>
+    <p style="font-size: 18px; color: #666; font-style: italic;">Полное руководство по созданию голосовых ботов и чат-ботов в Twin</p>
+</div>
+
+<!-- Навигация по урокам -->
+<div id="lesson1" class="lesson-navigation" style="background: linear-gradient(135deg, #2d6dcc 0%, #1a4d9c 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+    <h3 style="color: white; margin-top: 0;">📚 Навигация по урокам</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+        <a href="#lesson1" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 1: ТЗ и SMART</a>
+        <a href="#lesson2" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 2: Архитектура</a>
+        <a href="#lesson3" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 3: NLU</a>
+        <a href="#lesson4" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 4: Сущности</a>
+        <a href="#lesson5" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 5: Полировка</a>
+        <a href="#lesson6" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 6: Чат-боты</a>
+        <a href="#lesson7" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Урок 7: Запуск</a>
+        <a href="#material" style="color: white; text-decoration: none; padding: 8px; background: rgba(255,255,255,0.2); border-radius: 5px; text-align: center;">Материалы уроков</a>
+    </div>
+</div>
+
+<!-- Введение -->
+<div class="intro-section" style="background-color: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 4px solid #2d6dcc; margin-bottom: 30px;">
+    <h2 style="color: #2d6dcc; margin-top: 0;">🎯 О курсе</h2>
+    <p>Этот курс предоставил комплексное практическое понимание всего цикла создания и запуска омниканальных ботов — голосовых (ГС) и чат-ботов. Обучение прошло от первичной идеи до анализа результатов реального пилотного обзвона.</p>
+</div>
+
+<!-- Урок 1 -->
+<div id="lesson1" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #ff6b6b;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #ff6b6b; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            1
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 1: Старт проекта - От идеи к четкому ТЗ</h2>
+        </div>
+    </div>
     
+    <div class="lesson-content">
+        <div style="background: #fff5f5; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Научиться преобразовывать размытую идею заказчика в структурированное ТЗ.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">📋 Основные моменты:</h3>
+        <ul style="padding-left: 20px;">
+            <li><strong>Фундаментальная роль ТЗ</strong> - основа успеха проекта</li>
+            <li><strong>Методология SMART</strong> - конкретная, измеримая, достижимая, релевантная, ограниченная по времени цель</li>
+            <li><strong>Экономика проекта</strong> - расчет стоимости: 10₽ за сообщение, не списывается при неудачном дозвоне</li>
+        </ul>
+        
+        <h3 style="color: #2d6dcc;">💡 Пример цели по SMART:</h3>
+        <div style="background: #f0f7ff; padding: 15px; border-radius: 5px; border-left: 3px solid #2d6dcc;">
+            <strong>Цель:</strong> Опрос HR-специалистов<br>
+            <strong>Вопрос:</strong> «Какую HRM-систему вы используете?»<br>
+            <strong>Результат:</strong> Получить минимум 10% ответов от всех респондентов<br>
+            <strong>Срок:</strong> До конца сентября
+        </div>
+        
+        <div class="homework" style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>📚 Задание на самоизучение:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Изучить концепции "перебивания" в диалоге</li>
+                <li>Разобраться в терминах холодный, теплый, целевой лид</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Урок 2 -->
+<div id="lesson2" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #4ecdc4;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #4ecdc4; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            2
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 2: Создание "скелета" бота в Twin</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #f0f4f8; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Практическое создание базовой структуры голосового бота.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">🏗️ Что было создано:</h3>
+        <ul style="padding-left: 20px;">
+            <li><strong>Основные уровни проекта</strong> - модульная архитектура</li>
+            <li><strong>Пропись текстов</strong> в основных уровнях</li>
+            <li><strong>Основные переменные</strong> для хранения данных</li>
+            <li><strong>Обработка всех результатов</strong> ответов пользователя</li>
+            <li><strong>Обработка тишины</strong> и реакция на автоответчик</li>
+        </ul>
+        
+        <h3 style="color: #2d6dcc;">⚙️ Технические детали:</h3>
+        <div style="background: #f0f7ff; padding: 15px; border-radius: 5px;">
+            <strong>Инструменты:</strong> CoPilot в Bitrix24 для помощи в создании контента<br>
+            <strong>Важно:</strong> Озвучку не вставлять в вопросы, использовать настройку "Валидация"<br>
+            <strong>Принцип:</strong> Модульная сборка сценариев с созданием уровней
+        </div>
+        
+        <div class="homework" style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>📚 Задания с урока:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Организовать условие для определения времени суток (доброе утро/день/вечер)</li>
+                <li>Настроить "цветочик телепортов" для визуальной навигации</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Урок 3 -->
+<div id="lesson3" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #45b7d1;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #45b7d1; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            3
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 3: "Мозги" бота - Работа с NLU</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #f0f8f4; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Научить бота понимать смысл сказанного через Natural Language Understanding.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">🧠 Инструменты NLU:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div style="background: #e8f5e9; padding: 15px; border-radius: 5px;">
+                <strong>📊 База стандартных намерений</strong><br>
+                Готовые фразы (согласие, отказ, благодарность)
+            </div>
+            <div style="background: #e1f5fe; padding: 15px; border-radius: 5px;">
+                <strong>🎯 Специальные намерения</strong><br>
+                Создаются вручную под конкретную задачу
+            </div>
+        </div>
+        
+        <h3 style="color: #2d6dcc;">📝 Процесс дообучения:</h3>
+        <ul style="padding-left: 20px;">
+            <li><strong>Минимум 30 фраз</strong> на каждое намерение</li>
+            <li><strong>Генерация через GPT</strong> - фразы без знаков препинания, с маленькой буквы</li>
+            <li><strong>Загрузка файлом</strong> в NLU</li>
+            <li><strong>Порог точности:</strong> 60%</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Урок 4 -->
+<div id="lesson4" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #96ceb4;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #96ceb4; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            4
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 4: Сущности и логика диалога</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #f9fbe7; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Научить бота извлекать конкретные данные и гибко управлять диалогом.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">🔧 Разработано на уроке:</h3>
+        <ul style="padding-left: 20px;">
+            <li><strong>Обработка произвольного результата</strong></li>
+            <li><strong>Определение используемой системы</strong> клиентом</li>
+            <li><strong>Реперные фразы</strong> для продолжения диалога</li>
+            <li><strong>Маршрутизатор</strong> для возврата на нужный уровень</li>
+        </ul>
+        
+        <div class="homework" style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>📚 Вопросы на самоизучение:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Изучить теорию, что такое SIP-транк</li>
+                <li>Изучить документацию по статусам правила перезвона</li>
+                <li>Выполнить надиктовку сущностей (30+ вариантов систем)</li>
+                <li>Доделать подсценарии на блоки отработок возражений</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Урок 5 -->
+<div id="lesson5" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #feca57;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #feca57; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            5
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 5: Полировка и тестирование</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #fff8e1; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Добавление финальных деталей для естественности диалога.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">🎨 Изученные темы:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Обработка тишины
+            </div>
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Таймеры распознавания
+            </div>
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Уведомления
+            </div>
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Шаблоны SMS
+            </div>
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Тестирование
+            </div>
+            <div style="background: #fff3e0; padding: 10px; border-radius: 5px;">
+                • Озвучка
+            </div>
+        </div>
+        
+        <div class="homework" style="background: #e3f2fd; padding: 15px; border-radius: 5px;">
+            <strong>📚 Задания на самоизучение:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Прочитать про длительность распознавания и таймеры</li>
+                <li>Изучить статью про активное слушание</li>
+                <li>Разработать скрипт перезвона с уточнением времени</li>
+                <li>Вставить в бота озвучку от Владислава</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Урок 6 -->
+<div id="lesson6" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #ff9ff3;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #ff9ff3; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            6
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 6: Чат-боты и интеграции</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #fce4ec; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Создание чат-бота на основе ГС-сценария и настройка процессов.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">💬 Основные отличия чат-бота:</h3>
+        <ul style="padding-left: 20px;">
+            <li><strong>Первое сообщение</strong> - согласие на обработку данных</li>
+            <li>В блоке вопроса <strong>можно писать текст</strong></li>
+            <li>Настройка <strong>времени жизни чат-сессии</strong></li>
+        </ul>
+        
+        <h3 style="color: #2d6dcc;">🔄 Интеграции и процессы:</h3>
+        <ul style="padding-left: 20px;">
+            <li>Создание <strong>папки проектов на Google Диске</strong></li>
+            <li>Настройка <strong>шаблонов заданий на обзвон</strong></li>
+            <li>Интеграция <strong>Twain в Bitrix24</strong></li>
+            <li>Добавление бота в <strong>CRM воронки продаж</strong></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Урок 7 -->
+<div id="lesson7" class="lesson-card" style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #54a0ff;">
+    <div class="lesson-header" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div class="lesson-icon" style="background: #54a0ff; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; margin-right: 15px;">
+            7
+        </div>
+        <div>
+            <h2 style="color: #2d6dcc; margin: 0;">Урок 7: Пилотный запуск и аналитика</h2>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <div style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+            <strong>🎯 Ключевая цель:</strong> Тестовый запуск, сбор обратной связи и анализ эффективности.
+        </div>
+        
+        <h3 style="color: #2d6dcc;">🚀 Что было сделано:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div style="background: #bbdefb; padding: 15px; border-radius: 5px;">
+                <strong>🔧 Подготовка</strong><br>
+                • Запуск тестового звонка<br>
+                • Фикс ошибок<br>
+                • Создание пилотного опросника
+            </div>
+            <div style="background: #bbdefb; padding: 15px; border-radius: 5px;">
+                <strong>📊 Запуск</strong><br>
+                • Обзвон 26 человек<br>
+                • Интенсивность: 4 зв/сек<br>
+                • Скачивание отчета
+            </div>
+        </div>
+        
+        <h3 style="color: #2d6dcc;">📈 Аналитика:</h3>
+        <ul style="padding-left: 20px;">
+            <li>Создание <strong>сводной таблицы аналитики</strong></li>
+            <li>Сбор <strong>баг-репортов</strong></li>
+            <li>Анализ <strong>реальной конверсии</strong></li>
+            <li>Планирование <strong>доработок</strong></li>
+        </ul>
+        
+        <div class="homework" style="background: #ffebee; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <strong>⚠️ Задачи на доработку:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Улучшить фразу: "Мы в ближайшее время завершаем бесплатные интеграции..."</li>
+                <li>Исправить 10 выявленных ошибок</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Материалы -->
+<div id="material" class="materials-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; text-align: center;">
+    <h2 style="color: white;">📎 Материалы курса</h2>
+    <p>Видеозаписи всех уроков доступны по ссылкам:</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+        <a href="https://drive.google.com/file/d/1nVHxwvrU7rT5mlstI9pSPaM6aChDwCDh/view?usp=sharing" style="background: rgba(255,255,255,0.2); color: white; padding: 15px; border-radius: 5px; text-decoration: none;">Урок 1</a>
+        <a href="https://drive.google.com/file/d/1nBRN20xfSK2y3NrFv2I069y4Qe0uTqLd/view?usp=sharing" style="background: rgba(255,255,255,0.2); color: white; padding: 15px; border-radius: 5px; text-decoration: none;">Урок 2</a>
+        <a href="https://drive.google.com/file/d/1y-h8Gm8cxrnRocZWjj4mf4Or8jozUX5S/view?usp=sharing" style="background: rgba(255,255,255,0.2); color: white; padding: 15px; border-radius: 5px; text-decoration: none;">Урок 3</a>
+        <a href="https://drive.google.com/file/d/1hdaGKHTinl90QTGiHDqu8D_2WmyB700K/view?usp=sharing" style="background: rgba(255,255,255,0.2); color: white; padding: 15px; border-radius: 5px; text-decoration: none;">Урок 4</a>
+    </div>
+</div>
+
+<!-- Заключение -->
+<div class="conclusion" style="background-color: #2d6dcc; color: white; padding: 30px; border-radius: 10px; margin-top: 30px; text-align: center;">
+    <h2 style="color: white;">✅ Итоги курса</h2>
+    <p style="font-size: 18px;">Курс охватил полный цикл разработки бота: от идеи до запуска и итеративного улучшения на основе данных. Полученные навыки позволяют создавать эффективные омниканальные боты для решения бизнес-задач.</p>
+</div>
+
+</div>
 </body>
 </html>
